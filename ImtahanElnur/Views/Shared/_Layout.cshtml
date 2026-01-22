@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<!-- templatemo 416 xenon -->
+<!--
+Xenon Template
+http://www.templatemo.com/tm-416-xenon
+-->
+<head>
+    <meta charset="utf-8">
+    <title>Xenon Design</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
+
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Normailize Stylesheet -->
+    <link rel="stylesheet" href="~/assets/css/normalize.min.css">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="~/assets/css/templatemo_style.css">
+
+    <script src="~/assets/js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+    <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="site-header" id="top">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#main-menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <div class="logo-wrapper">
+                            <a class="navbar-brand" href="#">
+                                <em>Xenon</em> Design
+                                <span class="logo-s"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="main-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <span class="nav-s"></span>
+                            <li class="active"><a href="#top">Home</a></li>
+                            <li><a href="#product-inner">Products</a></li>
+                            <li><a href="#portfolio">Work</a></li>
+                            <li><a href="#promotion">Promotion</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+            @RenderBody()
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <p>Copyright © 2084 Your Company Name</p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <ul class="social">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                        <li><a href="#" class="fa fa-google-plus"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="~/assets/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/plugins.js"></script>
+    <script src="~/assets/js/main.js"></script>
+
+
+    <!-- Google Map -->
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="~/assets/js/jquery.gmap3.min.js"></script>
+
+    <!-- Google Map Init-->
+    <script type="text/javascript">
+        jQuery(function($){
+            $('#map_canvas').gmap3({
+                marker:{
+                    address: '16.8496189,96.1288854'
+                },
+                    map:{
+                    options:{
+                    zoom: 15,
+                    scrollwheel: false,
+                    streetViewControl : true
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
