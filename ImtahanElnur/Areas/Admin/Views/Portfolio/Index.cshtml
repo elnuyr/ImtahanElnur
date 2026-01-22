@@ -1,0 +1,31 @@
+﻿@model IEnumerable<PortfolioVM>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Image</th>
+            <th scope="col">Fullname</th>
+            <th scope="col">Profession</th>
+        </tr>
+    </thead>
+    <a asp-action="Create" class="btn btn-success">Create</a>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td><img src="~/assets/images/@item.ImagePath"/></td>
+                <td>@item.FullName</td>
+                <td>@item.ProfessionName</td>
+                <td>
+                    <a asp-controller="Portfolio" asp-action="Update" asp-route-id="@item.Id" class="btn btn-primary">Update</a>
+                    <a asp-controller="Portfolio" asp-action="Detail" asp-route-id="@item.Id" class="btn btn-warning">Detail</a>
+                    <a asp-controller="Portfolio" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

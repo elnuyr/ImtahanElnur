@@ -1,4 +1,6 @@
-﻿<div class="top-section">
+﻿@model IEnumerable<PortfolioVM>
+
+<div class="top-section">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -56,127 +58,29 @@
             <div class="col-md-12 text-center">
                 <ul class="filters">
                     <li class="active filter" data-filter="all">All</li>
-                    <li class="filter" data-filter="responsive">Responsive</li>
-                    <li class="filter" data-filter="creative">Creative</li>
-                    <li class="filter" data-filter="illustration">Illustration</li>
-                    <li class="filter" data-filter="nature">Nature</li>
-                    <li class="filter" data-filter="graphic">Graphic</li>
+                    
                 </ul>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 col-sm-6 mix responsive">
-                <div class="work-item">
-                    <div class="image-holder">
-                        <img src="~/assets/images/gallery/1.jpg" alt="">
-                        <div class="overlay">
-                            <a href="~/assets/images/gallery/1.jpg" data-rel="lightbox">
-                                <i class="fa fa-search"></i>
-                            </a>
+            @foreach(var item in Model)
+            {
+                <div class="col-md-3 col-sm-6 mix responsive">
+                    <div class="work-item">
+                        <div class="image-holder">
+                            <img src="~/assets/images/@item.ImagePath" alt="">
+                            <div class="overlay">
+                                <a href="~/assets/images/@item.ImagePath" data-rel="lightbox">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div>
                         </div>
+                        <h4>@item.FullName</h4>
+                        <span>@item.ProfessionName</span>
                     </div>
-                    <h4>RESPONSIVE ONE</h4>
-                    <span>Responsive</span>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6 mix nature">
-                <div class="work-item">
-                    <div class="image-holder">
-                        <img src="~/assets/images/gallery/2.jpg" alt="">
-                        <div class="overlay">
-                            <a href="~/assets/images/gallery/2.jpg" data-rel="lightbox">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <h4>BUTTERFLY ONE</h4>
-                    <span>Nature</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 mix creative illustration">
-                <div class="work-item">
-                    <div class="image-holder">
-                        <img src="~/assets/images/gallery/3.jpg" alt="">
-                        <div class="overlay">
-                            <a href="~/assets/images/gallery/3.jpg" data-rel="lightbox">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <h4>CREATIVE MIX ONE</h4>
-                    <span>Creative, Illustration</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 mix graphic">
-                <div class="work-item">
-                    <div class="image-holder">
-                        <img src="~/assets/images/gallery/4.jpg" alt="">
-                        <div class="overlay">
-                            <a href="~/assets/images/gallery/4.jpg" data-rel="lightbox">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <h4>FIRST GRAPHIC</h4>
-                    <span>Graphic</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 mix nature">
-                <div class="work-item">
-                    <div class="image-holder">
-                        <img src="~/assets/images/gallery/5.jpg" alt="">
-                        <div class="overlay">
-                            <a href="~/assets/images/gallery/5.jpg" data-rel="lightbox">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <h4>BUTTERFLY TWO</h4>
-                    <span>Nature</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 mix graphic">
-                <div class="work-item">
-                    <div class="image-holder">
-                        <img src="~/assets/images/gallery/6.jpg" alt="">
-                        <div class="overlay">
-                            <a href="~/assets/images/gallery/6.jpg" data-rel="lightbox">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <h4>SECOND GRAPHIC</h4>
-                    <span>Graphic</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 mix creative responsive">
-                <div class="work-item">
-                    <div class="image-holder">
-                        <img src="~/assets/images/gallery/7.jpg" alt="">
-                        <div class="overlay">
-                            <a href="~/assets/images/gallery/7.jpg" data-rel="lightbox">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <h4>RESPONSIVE CREATIVE</h4>
-                    <span>Responsive, Creative</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 mix creative illustration">
-                <div class="work-item">
-                    <div class="image-holder">
-                        <img src="~/assets/images/gallery/8.jpg" alt="">
-                        <div class="overlay">
-                            <a href="~/assets/images/gallery/8.jpg" data-rel="lightbox">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <h4>CREATIVE MIX TWO</h4>
-                    <span>Creative, Illustration</span>
-                </div>
-            </div>
+
+            }
         </div>
     </div>
 </div>
